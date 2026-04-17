@@ -15,6 +15,7 @@ const Bot = () => {
       const response = await fetch("http://127.0.0.1:8000/get", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
+<<<<<<< HEAD
         body: JSON.stringify({ msg: userMessage, audio: true }), 
       });
 
@@ -22,6 +23,15 @@ const Bot = () => {
       setBotReply(data.response); 
       setAudioUrl(data.audio);   
       setUserMessage("");   
+=======
+        body: JSON.stringify({ msg: userMessage, audio: true }), // must match Flask
+      });
+
+      const data = await response.json();
+      setBotReply(data.response); // matches Flask key
+      setAudioUrl(data.audio);    // matches Flask key
+      setUserMessage("");         // clear input
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c
     } catch (error) {
       console.error("Error fetching bot reply:", error);
     }

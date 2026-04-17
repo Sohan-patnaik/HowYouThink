@@ -10,7 +10,11 @@ const [preference,setPreference] = React.useState('')
 const router = useRouter();
 
  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+<<<<<<< HEAD
     e.preventDefault() 
+=======
+    e.preventDefault() // stop page reload
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c
     try {
       const res = await axios.post('http://127.0.0.1:8000/set_profile', {
         name,

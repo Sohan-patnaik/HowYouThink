@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 langchain-community
 langchain-text-splitters
 langchain-google-genai
@@ -13,3 +14,10 @@ pypdf
 supabase
 python-multipart
 rank_bm25
+=======
+chatterbot
+chatterbot_corpus
+flask
+spacy
+nltk
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c

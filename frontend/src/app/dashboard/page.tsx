@@ -28,7 +28,12 @@ export default function CreateBotPage() {
       formData.append("description", description);
       formData.append("file", file);
 
+<<<<<<< HEAD
       const res = await fetch("http://127.0.0.1:8000/create-bot/create-bot", {
+=======
+      // No Authorization header now
+      const res = await fetch("http://127.0.0.1:8000/create-bot", {
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c
         method: "POST",
         body: formData,
       });
@@ -42,8 +47,13 @@ export default function CreateBotPage() {
         setFile(null);
         setDescription("");
 
+<<<<<<< HEAD
        
         router.push(`/chat/${createdBot.bot_id}`);
+=======
+        // ✅ Redirect to chat page for this bot
+        router.push(`/chat/${createdBot.id}`);
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c
       } else {
         setMessage(`Error: ${data.error || "Failed to create bot"}`);
       }
@@ -57,7 +67,11 @@ export default function CreateBotPage() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-start gap-8 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 p-8 text-white">
+<<<<<<< HEAD
       <h1 className="text-4xl font-extrabold tracking-wide">Create Your Personal AI assistant</h1>
+=======
+      <h1 className="text-4xl font-extrabold tracking-wide">Create Your Bot</h1>
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c
 
       <form
         onSubmit={handleSubmit}
@@ -82,7 +96,11 @@ export default function CreateBotPage() {
         <input
           id="botData"
           type="file"
+<<<<<<< HEAD
           accept=".pdf"
+=======
+          accept=".json,.csv,.yml,.yaml"
+>>>>>>> 43a2b4ea611d136390df66cebec521ca3fdc353c
           className="block w-full text-sm text-gray-200
                      file:mr-4 file:py-2 file:px-4
                      file:rounded-md file:border-0
